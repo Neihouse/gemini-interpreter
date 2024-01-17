@@ -1,4 +1,3 @@
-```python
 import os
 import getpass
 
@@ -15,7 +14,7 @@ class RenameExtension:
     def rename_file_or_folder(self, old_name, new_name):
         if self.check_sudo():
             os.rename(old_name, new_name)
-            print(f"{old_name} renamed to {new_name}.")
+            print(f"{old_name} renamed to {newname}.")
         else:
             print("You do not have sudo control.")
 
@@ -23,4 +22,3 @@ class RenameExtension:
         return os.geteuid() == 0
 
 rename_extension = RenameExtension()
-```
